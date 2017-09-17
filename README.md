@@ -1,5 +1,5 @@
 <div align=center>
-  <h1>Timestamps CLI</h1>
+  <h1>Timezones CLI</h1>
   <h6>Command line tool to convert a date or timestamp into different timezones.<h6>
 </div>
 
@@ -35,7 +35,7 @@ EST/CDT (-5:00) 2016-12-13 11:40 PM New York
 EDT     (-4:00) 2016-12-14 12:40 AM
 ```
 
-# convert epoch timestamp
+convert epoch timestamp
 ```
 $ timezones 1505880000000
 UTC             2017-09-20 04:00 AM
