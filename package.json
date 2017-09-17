@@ -4,5 +4,11 @@
   "description": "A cli tool to convert a date or timestamp into different timezones.",
   "main": "index.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "moment-timezone": "^0.5.13"
+  },
+  "bin": {
+    "timezones": "./cli.js"
+  }
 }
