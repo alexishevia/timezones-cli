@@ -7,7 +7,7 @@ const TIME_ZONES = {
   'PST    ': { offset: '(-8:00)', tz: 'Etc/GMT+8' },
   'PDT/MST': { offset: '(-7:00)', tz: 'Etc/GMT+7' },
   'CST/MDT': { offset: '(-6:00)', tz: 'Etc/GMT+6' },
-  'EST/CDT': { offset: '(-5:00)', tz: 'Etc/GMT+5' },
+  'CDT/EST': { offset: '(-5:00)', tz: 'Etc/GMT+5' },
   'EDT    ': { offset: '(-4:00)', tz: 'Etc/GMT+4' },
 }
 const CITIES = {
