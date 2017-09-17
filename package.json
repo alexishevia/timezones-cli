@@ -1,6 +1,6 @@
 {
   "name": "timezones-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cli tool to convert a date or timestamp into different timezones.",
   "main": "index.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
