@@ -5,6 +5,8 @@
 
 ## Usage
 
+See: [timezones-cli: How to Stay Sane Working With US Timezones](https://medium.com/@alexishevia/timezones-cli-how-to-stay-sane-working-with-us-timezones-72829ac409a9)
+
 convert current datetime
 ```
 $ npx timezones-cli
