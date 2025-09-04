@@ -2,11 +2,33 @@
   "name": "timezones-cli",
   "version": "1.1.0",
   "description": "A cli tool to convert a date or timestamp into different timezones.",
-  "main": "index.js",
+  "main": "cli.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "cli",
+    "timezone",
+    "date",
+    "time",
+    "converter"
+  ],
+  "scripts": {
+    "start": "node cli.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "dependencies": {
-    "moment-timezone": "^0.5.13"
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3"
   },
   "bin": {
     "timezones-cli": "./cli.js"

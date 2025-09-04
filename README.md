@@ -8,6 +8,7 @@
 See: [timezones-cli: How to Stay Sane Working With US Timezones](https://medium.com/@alexishevia/timezones-cli-how-to-stay-sane-working-with-us-timezones-72829ac409a9)
 
 convert current datetime
+
 ```
 $ npx timezones-cli
 UTC             2017-09-14 03:13 PM
@@ -19,6 +20,7 @@ EDT     (-4:00) 2017-09-14 11:13 AM New York
 ```
 
 convert date in ISO-8601 format
+
 ```
 $ npx timezones-cli 2016-12-14T04:40:44.248Z
 UTC             2016-12-14 04:40 AM
@@ -30,6 +32,7 @@ EDT     (-4:00) 2016-12-14 12:40 AM
 ```
 
 convert epoch timestamp
+
 ```
 $ npx timezones-cli 1505880000000
 UTC             2017-09-20 04:00 AM
