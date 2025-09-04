@@ -48,3 +48,53 @@ EDT     (-4:00) 2017-09-20 12:00 AM New York
 ```shell
 npm install timezones-cli --global
 ```
+
+## Development
+
+### Running Tests
+
+```shell
+npm test
+```
+
+### Code Quality
+
+```shell
+npm run lint        # Check for linting issues
+npm run lint:fix    # Auto-fix linting issues
+npm run format      # Format code with Prettier
+```
+
+### Publishing to npm
+
+To update the package on [npmjs.com](https://www.npmjs.com/package/timezones-cli):
+
+1. **Update the version** in `package.json` (this also creates a git tag automatically):
+   ```shell
+   npm version patch   # for bug fixes (1.1.0 → 1.1.1)
+   npm version minor   # for new features (1.1.0 → 1.2.0)
+   npm version major   # for breaking changes (1.1.0 → 2.0.0)
+   ```
+
+2. **Publish to npm**:
+   ```shell
+   npm publish
+   ```
+
+3. **Push changes and tags to git**:
+   ```shell
+   git push origin main --tags
+   ```
+
+4. **Create GitHub Release** (optional but recommended):
+   - Go to [GitHub Releases](https://github.com/alexishevia/timezones-cli/releases)
+   - Click "Create a new release"
+   - Select the tag created by `npm version`
+   - Add release title (e.g., "v1.2.0")
+   - Add release notes describing changes, new features, bug fixes
+   - Click "Publish release"
+
+**Note**: 
+- `npm version` automatically creates a git commit and tag
+- Make sure you're logged in to npm (`npm login`) and have publish permissions for the `timezones-cli` package
+- GitHub releases provide better documentation and changelog for users
