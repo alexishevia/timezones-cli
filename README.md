@@ -83,7 +83,7 @@ To update the package on [npmjs.com](https://www.npmjs.com/package/timezones-cli
 
 3. **Push changes and tags to git**:
    ```shell
-   git push origin main --tags
+   git push origin master --tags
    ```
 
 4. **Create GitHub Release** (optional but recommended):
