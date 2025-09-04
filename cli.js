@@ -23,6 +23,38 @@ const CITIES = {
 };
 
 /**
+ * Display help information
+ */
+function showHelp() {
+  console.log(`
+timezones-cli - Convert dates and timestamps to different timezones
+
+USAGE:
+  timezones-cli [date|timestamp]
+  timezones-cli --help
+
+ARGUMENTS:
+  date|timestamp    Optional. Date string or Unix timestamp to convert.
+                    If not provided, uses current date/time.
+
+OPTIONS:
+  --help, -h        Show this help message
+
+EXAMPLES:
+  timezones-cli                           # Use current date/time
+  timezones-cli "2024-01-15 10:30"        # Convert specific date
+  timezones-cli "2024-01-15T10:30:00Z"    # ISO format
+  timezones-cli 1705320600000             # Unix timestamp (milliseconds)
+  timezones-cli --help                    # Show this help
+
+OUTPUT:
+  Displays the input date/time converted to various timezones:
+  - UTC, PST, PDT/MST, CST/MDT, CDT/EST, EDT
+  - Shows matching major cities for each timezone
+`);
+}
+
+/**
  * Parse input date string or timestamp
  * @param {string} input - Date string or timestamp
  * @returns {Date} Parsed date object
@@ -66,9 +98,15 @@ function formatDateInTimezone(date, timeZone) {
 function main() {
   try {
     const [, , ...args] = process.argv;
-    const inputDate = args[0];
+    const firstArg = args[0];
 
-    const date = parseInputDate(inputDate);
+    // Check for help flag
+    if (firstArg === '--help' || firstArg === '-h') {
+      showHelp();
+      return;
+    }
+
+    const date = parseInputDate(firstArg);
 
     // Generate city dates for comparison
     const cityDates = Object.entries(CITIES).reduce((memo, [city, tz]) => {
